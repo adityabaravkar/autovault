@@ -96,7 +96,7 @@
                 <version>3.13.0</version>
                 <configuration>
 <!--                    <outputDirectory>${project.build.directory}/jmods</outputDirectory>-->
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
 
