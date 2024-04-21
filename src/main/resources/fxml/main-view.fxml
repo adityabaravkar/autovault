@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autovault.controllers.MainController">
+    <Tab text="Upload Excel Files">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Button text="Upload File" onAction="#uploadFile"/>
+<!--                <Label text="No file selected"/>-->
+            </HBox>
+            <TableView fx:id="excelDataTable">
+                <columns>
+<!--                    <TableColumn text="Column 1"/>-->
+<!--                    <TableColumn text="Column 2"/>-->
+<!--                    <TableColumn text="Doctor" />-->
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+    <Tab text="Add Doctor">
+        <VBox spacing="10">
+            <HBox spacing="10">
+                <Label text="Name:"/>
+                <TextField fx:id="doctorNameField"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Address:"/>
+                <TextField fx:id="doctorAddressField"/>
+            </HBox>
+            <Button text="Add Doctor" onAction="#addDoctor"/>
+            <TableView fx:id="doctorsTableView">
+                <columns>
+                    <TableColumn text="ID" fx:id="doctorIdColumn"/>
+                    <TableColumn text="Name" fx:id="doctorNameColumn"/>
+                    <TableColumn text="Address" fx:id="doctorAddressColumn"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+</TabPane>
