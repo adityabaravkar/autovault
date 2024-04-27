@@ -13,30 +13,25 @@
 <TabPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autovault.controllers.MainController">
     <Tab text="Upload Excel Files">
         <VBox spacing="10">
-            <HBox spacing="10">
+            <HBox style="-fx-padding: 10 0 0 10">
                 <Button text="Upload File" onAction="#uploadFile"/>
-<!--                <Label text="No file selected"/>-->
             </HBox>
-            <TableView fx:id="excelDataTable">
-                <columns>
-<!--                    <TableColumn text="Column 1"/>-->
-<!--                    <TableColumn text="Column 2"/>-->
-<!--                    <TableColumn text="Doctor" />-->
-                </columns>
-            </TableView>
+            <TableView fx:id="excelDataTable"/>
         </VBox>
     </Tab>
     <Tab text="Add Doctor">
         <VBox spacing="10">
-            <HBox spacing="10">
-                <Label text="Name:"/>
+            <HBox style="-fx-padding: 10 0 0 10">
+                <Label prefWidth="60" text="Name:"/>
                 <TextField fx:id="doctorNameField"/>
             </HBox>
-            <HBox spacing="10">
-                <Label text="Address:"/>
-                <TextField fx:id="doctorAddressField"/>
+            <HBox style="-fx-padding: 0 0 0 10">
+                <Label prefWidth="60" text="Address:"/>
+                <TextField prefWidth="300" fx:id="doctorAddressField"/>
             </HBox>
-            <Button text="Add Doctor" onAction="#addDoctor"/>
+            <HBox style="-fx-padding: 0 0 0 10">
+                <Button text="Add Doctor" onAction="#addDoctor"/>
+            </HBox>
             <TableView fx:id="doctorsTableView">
                 <columns>
                     <TableColumn text="ID" fx:id="doctorIdColumn"/>

@@ -91,6 +91,7 @@ public class MainController {
             service.saveDoctor(doctor);
             doctorNameField.clear();
             doctorAddressField.clear();
+            excelDataTable.refresh();
         }
     }
 
